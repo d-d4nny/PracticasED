@@ -1,4 +1,4 @@
-package Gasolinera;
+package gasolinera;
 
 import java.util.ArrayList;
 import java.util.List;

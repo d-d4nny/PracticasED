@@ -1,4 +1,4 @@
-package clase;
+package cuentaCorriente;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,14 +8,14 @@ import java.util.Scanner;
  * Clase de acceso a la aplicación de gestión de cuentas
  * @author garfe
  */
-public class Principal {
+public class mainCuenta {
 
 	public static void main(String[] args) {
 		
 		//Inicializar el tipo cuenta
-		CuentaCorriente ccc = new CuentaCorriente();
+		cuentaCorriente ccc = new cuentaCorriente();
 		//Listado de cuentas (BD)
-		List<CuentaCorriente> listaCcc = new ArrayList<>();
+		List<cuentaCorriente> listaCcc = new ArrayList<>();
 		
 		// Imprimir el menú por consola
 		// Scanner con la opción del usuario

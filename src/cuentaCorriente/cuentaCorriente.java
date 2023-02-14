@@ -1,4 +1,4 @@
-package clase;
+package cuentaCorriente;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Modelo de las cuentas corrientes a gestionar
  * @author garfe *
  */
-public class CuentaCorriente {
+public class cuentaCorriente {
 	
 	/*
 	 * Si no definimos ningún constructor por campos,
@@ -18,14 +18,14 @@ public class CuentaCorriente {
 	 * será necesario definirlo en la clase de forma explícita.
 	 */
 	
-	public CuentaCorriente(String dni, String nombreTitular, double saldo) {
+	public cuentaCorriente(String dni, String nombreTitular, double saldo) {
 		super();
 		this.dni = dni;
 		this.nombreTitular = nombreTitular;
 		this.saldo = saldo;
 	}
 
-	public CuentaCorriente() {
+	public cuentaCorriente() {
 		super();
 	}
 
@@ -71,7 +71,7 @@ public class CuentaCorriente {
 	}
 	
 	//Métodos
-	public CuentaCorriente crearCuenta () {
+	public cuentaCorriente crearCuenta () {
 		
 		System.out.println("CREAR CUENTA: ");
 		Scanner entradaDni = new Scanner(System.in);	
@@ -84,7 +84,7 @@ public class CuentaCorriente {
 		opcionEntradaNombreTitular = entradaNombreTitular.next();
 		
 		//Opción 1, constructor vacío
-		CuentaCorriente cccVacio = new CuentaCorriente();
+		cuentaCorriente cccVacio = new cuentaCorriente();
 		cccVacio.setDni(opcionEntradaDni);
 		cccVacio.setNombreTitular(opcionEntradaNombreTitular);
 		cccVacio.setSaldo(0);
@@ -95,7 +95,7 @@ public class CuentaCorriente {
 		return cccInicializado;*/
 	}
 	
-	public List<CuentaCorriente> mostrarInfo(List<CuentaCorriente> bd) {
+	public List<cuentaCorriente> mostrarInfo(List<cuentaCorriente> bd) {
 		System.out.println("DATOS CUENTA: ");
 		//pedir dni
 		Scanner entradaDni = new Scanner(System.in);
@@ -104,7 +104,7 @@ public class CuentaCorriente {
 		//buscar la cuenta
 		int contador = 0;
 		boolean esEncontrado = false;
-		for(CuentaCorriente cuenta: bd) {
+		for(cuentaCorriente cuenta: bd) {
 			String dniBd = cuenta.getDni();
 			if(dniBd.equals(opcionEntradaDni)) {
 				esEncontrado = true;
@@ -122,7 +122,7 @@ public class CuentaCorriente {
 		return bd;
 	}
 	
-	public List<CuentaCorriente> ingresoCuenta(List<CuentaCorriente> bd) {
+	public List<cuentaCorriente> ingresoCuenta(List<cuentaCorriente> bd) {
 		System.out.println("INGRESO CUENTA: ");
 		//pedir dni
 		Scanner entradaDni = new Scanner(System.in);
@@ -131,7 +131,7 @@ public class CuentaCorriente {
 		//buscar la cuenta
 		int contador = 0;
 		boolean esEncontrado = false;
-		for(CuentaCorriente cuenta: bd) {			
+		for(cuentaCorriente cuenta: bd) {			
 			String dniBd = cuenta.getDni();
 			if(dniBd.equals(opcionEntradaDni)) {
 				esEncontrado = true;
@@ -155,7 +155,7 @@ public class CuentaCorriente {
 		return bd;
 	}
 	
-	public List<CuentaCorriente> retiradaCuenta(List<CuentaCorriente> bd){
+	public List<cuentaCorriente> retiradaCuenta(List<cuentaCorriente> bd){
 		System.out.println("RETIRADA CUENTA: ");
 		//pedir dni
 		Scanner entradaDni = new Scanner(System.in);
@@ -164,7 +164,7 @@ public class CuentaCorriente {
 		//buscar la cuenta
 		int contador = 0;
 		boolean esEncontrado = false;
-		for(CuentaCorriente cuenta: bd) {
+		for(cuentaCorriente cuenta: bd) {
 			String dniBd = cuenta.getDni();
 			if(dniBd.equals(opcionEntradaDni)) {
 				esEncontrado = true;
@@ -188,7 +188,7 @@ public class CuentaCorriente {
 		return bd;
 	}
 	
-	public ArrayList<CuentaCorriente> mostrarCuentasUsuario(String dniUsuario){
+	public ArrayList<cuentaCorriente> mostrarCuentasUsuario(String dniUsuario){
 		return null;		
 	}
 	

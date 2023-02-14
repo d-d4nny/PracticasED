@@ -1,10 +1,9 @@
-package Gasolinera;
+package gasolinera;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import clase.CuentaCorriente;
 
 public class gestionGasolinera {
 	
